@@ -1,5 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Online</title>
+
     <head>
         <link rel="stylesheet" href="style.css"/>
 
@@ -60,6 +65,16 @@
         </table>
         <button onclick="adicionarTecnicoNdt()">Técnicos NDT</button>
 
+        <h3>Tabela de SC</h3>
+        <table id="tecnicoTable">
+          <tr>
+            <th>Técnico</th>
+            <th>Código</th>
+          </tr>
+        </table>
+        <input type="text" id="nomeTecnico" placeholder="Nome do Técnico">
+        <input type="text" id="codigoTecnico" placeholder="Código">
+        <button onclick="adicionarTecnico()">Adicionar Técnico</button>
         
         <script>
           function adicionarNome() {
@@ -131,6 +146,23 @@
            }
           }
 
+          function adicionarTecnico() {
+            var nome = document.getElementById("nomeTecnico").value;
+            var codigo = document.getElementById("codigoTecnico").value;
+            if (nome && codigo) {
+              var table = document.getElementById("tecnicoTable");
+              var row = table.insertRow(-1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              cell1.innerHTML = nome;
+              cell2.innerHTML = codigo;
+              document.getElementById("nomeTecnico").value = ""; // Limpa o campo do nome
+              document.getElementById("codigoTecnico").value = ""; // Limpa o campo do código
+              } 
+              else {
+              alert("Por favor, preencha o nome e o código do técnico.");
+              }
+            }
           
         </script>
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
