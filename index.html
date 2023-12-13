@@ -18,12 +18,12 @@
       </head>
       <body>
       
-        <h3>Tabela de Nomes</h3>
+        <h3>Agenda Online</h3>
         <table id="nameTable">
           <tr>
-            <th>Nome</th>
-            <th>Assinalar OK</th>
-            <th>Remover</th>
+            <th>Tecnicos Externos</th>
+            <th>Agenda Conferida</th>
+            <th>Remover Técnico</th>
           </tr>
           <tr>
             <td><link>João</link></td>
@@ -47,7 +47,20 @@
         <button onclick="gerarImagem()">Gerar Imagem</button>
         <button onclick="realcarLinha(prompt('Digite o nome a destacar:'))">Férias</button>
         <button onclick="restaurarRealce()">Voltar das Férias</button>
-      
+
+
+        <h3>Tabela de NDT</h3>
+        <table id="ndtTable">
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade de NDT</th>
+          <th>Tipo de NDT</th>
+        </tr>
+        <!-- Aqui você pode adicionar as linhas da tabela com os dados -->
+        </table>
+        <button onclick="adicionarTecnicoNdt()">Técnicos NDT</button>
+
+        
         <script>
           function adicionarNome() {
             var nome = prompt("Digite o nome a adicionar:");
@@ -100,6 +113,25 @@
               link.click();
             });
           }
+
+          function adicionarTecnicoNdt() {
+            var nomeTecnico = prompt("Digite o nome do técnico NDT:");
+            var quantidadeNdt = prompt("Digite a quantidade de NDT:");
+            var tipoNdt = prompt("Digite o tipo de NDT:");
+
+          if (nomeTecnico != null && quantidadeNdt != null && tipoNdt != null) {
+            var table = document.getElementById("ndtTable");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            cell1.innerHTML = nomeTecnico;
+            cell2.innerHTML = quantidadeNdt;
+            cell3.innerHTML = tipoNdt;
+           }
+          }
+
+          
         </script>
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
       
