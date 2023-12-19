@@ -1,6 +1,7 @@
 body {
+    background-color: red;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    
   }
   
   h3 {
@@ -12,7 +13,7 @@ body {
   table {
     border-collapse: collapse;
     width: 100%;
-    background: #f9f9f9;
+    background: black
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -50,3 +51,32 @@ body {
     background-color: #275d91;
   }
   
+  input[type="checkbox"].nameCheckbox {
+    transform: scale(1.7); /* Ajuste o valor conforme desejado para aumentar o tamanho */
+  }
+  
+  /* Estiliza o <link>checkbox</link> */
+  input[type="checkbox"].nameCheckbox::before {
+    border: 2px solid #3677BA; /* Cor da borda */
+    background-color: #3677BA; /* Cor de fundo quando selecionado */
+  }
+
+  th{
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme desejado */
+    font-family: 'Nome da Fonte', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  }
+  
+  /* Adiciona fonte moderna aos elementos <link>th</link> */
+  h3,table,td,button{
+    font-family: 'Nome da Fonte', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: #fff;
+  }
