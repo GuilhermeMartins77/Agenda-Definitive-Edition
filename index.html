@@ -8,6 +8,9 @@
     <head>
         <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";></script>
+        <script src="firebase.js"></script>
 
         <style>
           table {
@@ -22,6 +25,8 @@
         </style>
       </head>
       <body>
+
+       <!-----------------------------------------------------------------------------------------------------------------------------------AQUI COMEÇA O CODIGO-------------------------------------------------------------------------------------------------------->
       
         <h3>Agenda Online // Versão Beta 0.0.5</h3>
         <div class="card text-center">
@@ -39,7 +44,7 @@
         </div>
         <br>
 
-        <!-------------------------------------------------------------------------------TABELA DE TECNICOS--------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------TABELA DE TECNICOS-------------------------------------------------------------------------------->
         <h3>Tabela de Técnicos</h3>
         <table id="nameTable"class="table table-bordered table-dark">
           <tr>
@@ -232,7 +237,10 @@
         <button onclick="realcarLinha(prompt('Digite o nome a destacar:'))">Férias</button>
         <button onclick="restaurarRealce()">Voltar das Férias</button>
 
+        <!-------------------------------------------------------------------------TABELA DE ROTAS------------------------------------------------------------------------>
+
         <br>
+
         <h3>Tabela de Rotas</h3>
         <table id="rotaTable" class="table table-bordered table-dark">
           <tr>
@@ -313,7 +321,7 @@
           </tr>
 
         </table>
-
+        <!-------------------------------------------------------------------------FIM DA TABELA DE ROTAS------------------------------------------------------------------------>
 
         <h3>Tabela de NDT</h3>
         <table id="ndtTable" class="table table-bordered table-dark">
